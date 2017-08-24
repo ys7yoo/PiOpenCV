@@ -17,7 +17,7 @@ sudo apt install screen
 
 # Steps
 
-## Step #1: Expand filesystem
+## Step 1: Expand filesystem
 
 It's automatically done in new versions.
 
@@ -27,7 +27,7 @@ Still, you may want to remove wolfram-engine to get more free space.
 sudo apt-get purge wolfram-engine
 ```
 
-## Step #2: Install dependencies
+## Step 2: Install dependencies
 ```bash
 sudo apt-get install build-essential cmake pkg-config
 
@@ -40,7 +40,7 @@ sudo apt-get install libatlas-base-dev gfortran
 sudo apt-get install python3-dev
 ```
 
-## Step #3: Download the OpenCV source code
+## Step 3: Download the OpenCV source code
 ```bash
 cd ~
 mkdir src
@@ -56,7 +56,7 @@ unzip opencv_contrib.zip
 ```
 
 
-## Step #4: Setting Python (Python 3)
+## Step 4: Setting Python (Python 3)
 
 In Jessi, pip is already installed.
 
@@ -74,9 +74,9 @@ See the [official document](https://docs.python.org/3/library/venv.html) for mor
 IT TAKES LONG TIME!!!
 
 
-## Step #5: Compile and Install OpenCV
+## Step 5: Compile and Install OpenCV
 
-Activate the venv
+Activate the venv you made in Step 4.
 ```bash
 source ~/cv3/bin/activate
 ``` 
