@@ -49,5 +49,4 @@ With Python3, DO NOT install virtualenv.
 Python 3 has built-in virtualenv!
 
 You may also want to upgrade your python 3 to version 3.6.
-
-
+For that, follow [this](https://gist.github.com/ys7yoo/93b1531d453eeb803fda30b5480c59c0).
