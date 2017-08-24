@@ -6,6 +6,15 @@ Instruction to install OpenCV on Raspberry Pi.
 * language: Python 3 (3.6.2)
 
 
+# Tips
+
+Use screen for time-consuming tasks!
+
+```bash
+sudo apt install screen
+```
+
+
 # Steps
 
 ## Step #1: Expand filesystem
