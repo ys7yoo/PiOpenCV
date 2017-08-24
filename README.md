@@ -1,8 +1,10 @@
 # PiOpenCV
-Instruction to install OpenCV on Raspberry Pi
-
-Based on the 
+Instruction to install OpenCV on Raspberry Pi.
+It's based on the 
 [Install guide: Raspberry Pi 3 + Raspbian Jessie + OpenCV 3.](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/) from pyimagesearch.com
+
+* target platform: Raspberry Pi 3B
+* languate: Python 3 (3.6.2)
 
 
 # Steps
