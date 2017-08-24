@@ -68,6 +68,6 @@ See the [official document](https://docs.python.org/3/library/venv.html) for mor
 ## Step #5: Compile and Install OpenCV
 
 Activate the venv
-``
+```bash
 source ~/cv3/bin/activate
 `` 
