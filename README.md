@@ -70,4 +70,4 @@ See the [official document](https://docs.python.org/3/library/venv.html) for mor
 Activate the venv
 ```bash
 source ~/cv3/bin/activate
-`` 
+``` 
