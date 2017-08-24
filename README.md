@@ -64,3 +64,10 @@ For that, follow [this](https://gist.github.com/ys7yoo/93b1531d453eeb803fda30b54
 
 See the [official document](https://docs.python.org/3/library/venv.html) for more information.
 
+
+## Step #5: Compile and Install OpenCV
+
+Activate the venv
+``
+source ~/cv3/bin/activate
+`` 
