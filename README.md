@@ -51,14 +51,16 @@ unzip opencv_contrib.zip
 
 In Jessi, pip is already installed.
 
-With Python3, DO NOT install virtualenv.
+Make a virtual environment for OpenCV3 with Python3
+```bash
+python3 -m venv ~/cv3
+``` 
+
+With Python3, DO NOT install or use virtualenv or virtualenvwrapper.
 Python 3 has built-in virtualenv!
 
 You may also want to upgrade your python 3 to version 3.6.
 For that, follow [this](https://gist.github.com/ys7yoo/93b1531d453eeb803fda30b5480c59c0).
 
-You can make a virtual environment for OpenCV3 with Python3
-```bash
-python3 -m venv ~/cv3
-```
+See the [official document](https://docs.python.org/3/library/venv.html) for more information.
 
