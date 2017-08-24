@@ -41,7 +41,7 @@ unzip opencv_contrib.zip
 ```
 
 
-## Step #4:Setting Python (Python 3)
+## Step #4: Setting Python (Python 3)
 
 In Jessi, pip is already installed.
 
