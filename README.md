@@ -41,4 +41,13 @@ unzip opencv_contrib.zip
 ```
 
 
-## Step #4: Python 2.7 or Python 3?
+## Step #4:Setting Python (Python 3)
+
+In Jessi, pip is already installed.
+
+With Python3, DO NOT install virtualenv.
+Python 3 has built-in virtualenv!
+
+You may also want to upgrade your python 3 to version 3.6.
+
+
