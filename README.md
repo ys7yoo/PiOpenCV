@@ -8,6 +8,11 @@ Based on the
 # Steps
 
 ## Step #1: Expand filesystem
+
+It's automatically done in new versions.
+
+Still, you may want to remove wolfram-engine to get more free space.
+
 ```bash
 sudo apt-get purge wolfram-engine
 ```
