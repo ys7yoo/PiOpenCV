@@ -15,7 +15,12 @@ sudo apt install screen
 ```
 
 
-# Steps
+
+# Easy way: install pre-compiled version
+
+
+# Harder way: build OpenCV from source by yourself
+Steps
 
 ## Step 1: Expand filesystem
 
