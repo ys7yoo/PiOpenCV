@@ -63,6 +63,19 @@ Then, open python and use it!
 python3
 ```
 
+For example, you can test whether the library is installed correctly as follows.
+```bash
+$ python
+Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.3.0
+```
+
+
+
 # Harder way: build OpenCV from source by yourself
 
 ## Step 1: Expand filesystem
@@ -189,7 +202,7 @@ Go to the folder and change the name.
 sudo mv cv2.cpython-34m.so cv2.so
 ```
 
-## Step #: Testing 
+## Step 7: Testing 
 
 ```
 $ python
