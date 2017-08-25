@@ -16,11 +16,44 @@ sudo apt install screen
 
 
 
-# Easy way: install pre-compiled version
+# Easy way: install pre-compiled version (OpenCV 3.3.0, Python 3.4)
+
+You can download pre-compiled library and use it.
+But, it works only for Raspbian Jessie with Python 3.4 and OpenCV 3.3.0.
+For other versions, you should build it by yourself. (See the next section.)
+
+
+0. Make sure you have updated your Raspberry Pi to the lated version.
+
+```bash
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo rpi-update
+```
+
+On Raspbian Lite, you should also install Python 3.
+```bash
+sudo apt-get install python3
+```
+
+
+
+1. make a virtual environment for OpenCV 3
+
+```bash
+python3 -m venv ~/cv3
+``` 
+Here, the virtual environment is set up in ~/cv3.
+
+
+2. download [this file](https://github.com/ys7yoo/PiOpenCV/releases/download/alpha_p34/cv2.so) and copy it to the library IN THE VIRTUAL ENVIRONMENT.
+```
+wget https://github.com/ys7yoo/PiOpenCV/releases/download/alpha_p34/cv2.so
+cp cv2.so 
+
 
 
 # Harder way: build OpenCV from source by yourself
-Steps
 
 ## Step 1: Expand filesystem
 
