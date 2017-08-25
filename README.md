@@ -107,9 +107,51 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=ON ..
 ```
 
-Now, let's build
+Now, let's build & install it.
 ```
 make -j4
+sudo make install
 ```
+
+## Step 6: Finishing installation.
+
+Ater completing installation, you will have a .so file in the sitepackage folder IN THE VIRTUAL ENVIONMENT.
+For example, your find cv2.cpython-34m.so in ~/cv3/lib/python3.4/site-packages.
+```
+(cv3) yyoo@RPI3B:~/cv3/lib/python3.4/site-packages $ ls -al
+total 4404
+drwxr-xr-x 10 yyoo yyoo    4096 Aug 25 08:26 .
+drwxr-xr-x  3 yyoo yyoo    4096 Aug 25 04:41 ..
+-rw-r--r--  1 root root 4358992 Aug 25 07:44 cv2.cpython-34m.so
+-rw-r--r--  1 yyoo yyoo     126 Aug 25 04:41 easy_install.py
+drwxr-xr-x  3 yyoo yyoo    4096 Aug 25 04:41 _markerlib
+drwxr-xr-x 17 yyoo yyoo    4096 Aug 25 04:54 numpy
+drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:54 numpy-1.13.1.egg-info
+drwxr-xr-x  6 yyoo yyoo    4096 Aug 25 04:41 pip
+drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:41 pip-1.5.6.dist-info
+-rw-r--r--  1 yyoo yyoo  101340 Aug 25 04:41 pkg_resources.py
+drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:41 __pycache__
+drwxr-xr-x  5 yyoo yyoo    4096 Aug 25 04:41 setuptools
+drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:41 setuptools-5.5.1.dist-info
+```
+
+However, the filename should be cv2.so (due to some bugs).
+Go to the folder and change the name.
+```
+sudo mv cv2.cpython-34m.so cv2.so
+```
+
+## Step #: Testing 
+
+```
+$ python
+Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.3.0'
+```
+
 
 
