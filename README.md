@@ -27,15 +27,12 @@ sudo rpi-update
 ```
 
 On Raspbian Lite, you should also install Python 3.
-```bash
-sudo apt-get install python3
-```
-
-Or, remove Python 2.7 and then Python 3.4 will be installed instead. (This will save your space!)
+It is recommended to remove older version before install version 3.
 ```bash
 sudo apt-get purge python2.7
+sudo apt-get autoremove
+sudo apt-get install python3
 ```
-
 
 
 
