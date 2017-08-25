@@ -46,11 +46,22 @@ Here, the virtual environment is set up in ~/cv3.
 
 
 2. download [this file](https://github.com/ys7yoo/PiOpenCV/releases/download/alpha_p34/cv2.so) and copy it to the library IN THE VIRTUAL ENVIRONMENT.
-```
+```bash
 wget https://github.com/ys7yoo/PiOpenCV/releases/download/alpha_p34/cv2.so
-cp cv2.so 
+cp cv2.so ~/cv3/lib/python3.4/site-packages/ 
+```
 
+3. Then, you' can use OpenCV 3.3 in the virtual environment.
 
+First, activate the virtual environment.
+```bash
+source ~/cv3/bin/activate
+```
+
+Then, open python and use it!
+```bash
+python3
+```
 
 # Harder way: build OpenCV from source by yourself
 
