@@ -31,6 +31,12 @@ On Raspbian Lite, you should also install Python 3.
 sudo apt-get install python3
 ```
 
+Or, remove Python 2.7 and then Python 3.4 will be installed instead. (This will save your space!)
+```bash
+sudo apt-get purge python2.7
+```
+
+
 
 
 1. make a virtual environment for OpenCV 3
