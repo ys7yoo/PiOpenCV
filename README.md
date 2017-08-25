@@ -74,9 +74,38 @@ See the [official document](https://docs.python.org/3/library/venv.html) for mor
 IT TAKES LONG TIME!!!
 
 
+
 ## Step 5: Compile and Install OpenCV
 
 Activate the venv you made in Step 4.
 ```bash
 source ~/cv3/bin/activate
 ``` 
+
+Install numpy: 
+```
+pip install numpy
+```
+This takes some time.
+
+Prepare configurations to build OpenCV from the source you downloaded.
+```
+cd opencv-3.3.0
+mkdir build
+cd build
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D BUILD_opencv_python2=OFF \
+    -D BUILD_opencv_python3=ON \
+    -D PYTHON_DEFAULT_EXECUTABLE=$(which python3) \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib-3.3.0/modules \
+    -D BUILD_EXAMPLES=ON ..
+```
+
+Now, let's build
+```
+make -j4
+```
+
+
