@@ -18,7 +18,7 @@ But, it works only for Raspbian Jessie with Python 3.4 and OpenCV 3.3.0.
 For other versions, you should build it by yourself. (See the next section.)
 
 
-0. Make sure you have updated your Raspberry Pi to the lated version.
+0. Make sure you have updated your Raspberry Pi to the latest version.
 
 ```bash
 sudo apt-get update
