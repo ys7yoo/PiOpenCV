@@ -3,8 +3,53 @@ Instruction to install OpenCV from source on Raspberry Pi.
 * target platform: Raspberry Pi 3B
 * language: Python 3
 * Open CV version: 3.3.0
-* based on the 
+
+
+# easy way: install pre-compiled packages
+
+## Step 1: Install dependencies
+```bash
+sudo apt-get install build-essential cmake pkg-config
+
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libatlas-base-dev gfortran
+
+sudo apt-get install python3-dev python3-venv
+```
+
+## Step 2. Download and install pre-built packages
+
+Download these files: 
+
+
+Install 
+```bash
+rpm
+```
+
+
+## Step 3: Testing 
+
+```
+$ python
+Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.3.0'
+```
+
+
+
+# Harder way: build OpenCV from source
+ 
+ based on the 
 [Install guide: Raspberry Pi 3 + Raspbian Jessie + OpenCV 3](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/) from pyimagesearch.com
+
 
 ## Step 1: Expand filesystem
 
