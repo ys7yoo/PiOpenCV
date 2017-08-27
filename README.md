@@ -30,7 +30,7 @@ sudo apt-get install libxvidcore-dev libx264-dev
 sudo apt-get install libgtk2.0-dev
 sudo apt-get install libatlas-base-dev gfortran
 
-sudo apt-get install python3-dev
+sudo apt-get install python3-dev python3-venv
 ```
 
 ## Step 3: Download the OpenCV source code
