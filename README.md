@@ -5,76 +5,7 @@ Instruction to install OpenCV on Raspberry Pi.
 * Open CV version: 3.3.0
 
 
-
-
-
-
-# Easy way: install pre-compiled version (OpenCV 3.3.0, Python 3.4)
-
-You can download pre-compiled library and use it.
-But, it works only for Raspbian Jessie with Python 3.4 and OpenCV 3.3.0.
-For other versions, you should build it by yourself. (See the next section.)
-
-
-0. Make sure you have updated your Raspberry Pi to the latest version.
-
-```bash
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo rpi-update
-```
-
-On Raspbian Lite, you should also install Python 3.
-It is recommended to remove older version before install version 3.
-```bash
-sudo apt-get purge python2.7
-sudo apt-get autoremove
-
-sudo apt-get install python3 python3-pip python3-venv
-```
-
-
-
-1. make a virtual environment for OpenCV 3
-
-```bash
-python3 -m venv ~/cv3
-``` 
-Here, the virtual environment is set up in ~/cv3.
-
-
-2. download [this file](https://github.com/ys7yoo/PiOpenCV/releases/download/alpha_p34/cv2.so) and copy it to the library IN THE VIRTUAL ENVIRONMENT.
-```bash
-wget https://github.com/ys7yoo/PiOpenCV/releases/download/alpha_p34/cv2.so
-cp cv2.so ~/cv3/lib/python3.4/site-packages/ 
-```
-
-3. Then, you' can use OpenCV 3.3 in the virtual environment.
-
-First, activate the virtual environment.
-```bash
-source ~/cv3/bin/activate
-```
-
-Then, open python and use it!
-```bash
-python3
-```
-
-For example, you can test whether the library is installed correctly as follows.
-```bash
-$ python
-Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
-[GCC 4.9.1] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import cv2
->>> cv2.__version__
-'3.3.0
-```
-
-
-
-# Harder way: build OpenCV from source from scratch
+# Build OpenCV from source from scratch
 
 * based on the 
 [Install guide: Raspberry Pi 3 + Raspbian Jessie + OpenCV 3](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/) from pyimagesearch.com
