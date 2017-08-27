@@ -9,8 +9,6 @@ Instruction to install OpenCV from source on Raspberry Pi.
 
 ## Step 1: Install dependencies
 ```bash
-sudo apt-get install build-essential cmake pkg-config
-
 sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install libxvidcore-dev libx264-dev
