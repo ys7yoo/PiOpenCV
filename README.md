@@ -5,7 +5,7 @@ Instruction to install OpenCV from source on Raspberry Pi.
 * Open CV version: 3.3.0
 
 
-# easy way: install pre-compiled packages
+# Easy way: install pre-compiled packages
 
 ## Step 1: Install dependencies
 ```bash
