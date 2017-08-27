@@ -27,7 +27,10 @@ Download these files:
 
 Install 
 ```bash
-rpm
+sudo dpkg -i XXX.deb
+sudo dpkg -i XXX.deb
+sudo dpkg -i XXX.deb
+sudo dpkg -i XXX.deb
 ```
 
 
