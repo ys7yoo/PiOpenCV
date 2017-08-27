@@ -30,7 +30,7 @@ It is recommended to remove older version before install version 3.
 sudo apt-get purge python2.7
 sudo apt-get autoremove
 
-sudo apt-get install python3 python3-pip
+sudo apt-get install python3 python3-pip python3-venv
 ```
 
 
