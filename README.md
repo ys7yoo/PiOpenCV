@@ -20,8 +20,12 @@ sudo apt-get install python3-dev python3-venv -y
 
 ## Step 2. Download and install pre-built packages
 
+**NOTE** NEEDS RE-BUILDING!!! WAIT FOR A MOMENT. 
+
 Download the pre-compiled package: 
 https://github.com/ys7yoo/PiOpenCV/releases/download/2017/opencv3-RPI.deb
+
+
 
 ```bash
 wget https://github.com/ys7yoo/PiOpenCV/releases/download/2017/opencv3-RPI.deb
