@@ -70,6 +70,11 @@ sudo apt purge python
 sudo apt autoremove
 ```
 
+Install Python 3
+```bash
+sudo apt install python3 python3-setuptools
+```
+
 ```bash
 sudo apt-get purge wolfram-engine
 ```
