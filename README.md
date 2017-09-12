@@ -134,6 +134,18 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.3.0/modules ..
 ```
 
+In the Python section of the log, you should see something like this: 
+```
+--   Python 3:
+--     Interpreter:                 /usr/bin/python3 (ver 3.5.3)
+--     Libraries:                   /usr/lib/arm-linux-gnueabihf/libpython3.5m.so (ver 3.5.3)
+--     numpy:                       /home/yyoo/.local/lib/python3.5/site-packages/numpy/core/include (ver 1.13.1)
+--     packages path:               lib/python3.5/dist-packages
+-- 
+--   Python (for build):            /usr/bin/python3
+```
+
+
 Now, let's build & install it.
 ```
 make -j4
