@@ -72,7 +72,7 @@ sudo apt autoremove
 
 Install Python 3
 ```bash
-sudo apt install python3 python3-setuptools
+sudo apt install python3 python3-setuptools python3-dev python3-venv -y
 ```
 
 ```bash
@@ -88,8 +88,6 @@ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
 sudo apt-get install libxvidcore-dev libx264-dev -y
 sudo apt-get install libgtk2.0-dev -y
 sudo apt-get install libatlas-base-dev gfortran -y
-
-sudo apt-get install python3-dev python3-venv -y
 ```
 
 ## Step 3: Download the OpenCV source code
