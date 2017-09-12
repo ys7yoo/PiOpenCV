@@ -62,7 +62,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 It's automatically done in new versions.
 
-Still, you may want to remove wolfram-engine to get more free space.
+Still, you may want to remove unused packeges to get more free space.
+
+Let's remove python 2.7.
+```bash
+sudo apt purge python
+sudo apt autoremove
+```
 
 ```bash
 sudo apt-get purge wolfram-engine
