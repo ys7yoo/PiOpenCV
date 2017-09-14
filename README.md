@@ -152,6 +152,42 @@ make -j4
 sudo make install
 ```
 
+Due to some bugs, the name of the Python binding library is not correct.
+During the installation, you will see log like this.
+```bash
+-- Installing: /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so
+```
+
+Let's fix it with a symbolic link.
+```bash
+sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
+```
+
+Now, you're ready to use OpenCV from Python system-wide. 
+Testing with Python 3.5: 
+```
+$ python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170124] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.3.0'
+```
+
+Testing with Python 3.4: 
+```
+$ python3
+Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.3.0'
+```
+
+Next section is for adding access from a virtual environment.
+
 
 
 ## Step 5: Setting Python (Python 3)
