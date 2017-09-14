@@ -208,11 +208,6 @@ To activate the venv you made, execute
 source ~/cv3/bin/activate
 ``` 
 
-To deactivate, you can execute
-```bash
-deactivate
-```
-
 
 Let's make a symbolic like inside of your venv package folder. 
 ```bash
