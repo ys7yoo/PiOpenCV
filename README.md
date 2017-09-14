@@ -186,13 +186,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 '3.3.0'
 ```
 
+
+
+
+## Step 5: Setting OpenCV for a virtual environment (Python 3)
+
 Next section is for adding access from a virtual environment.
 
-
-
-## Step 5: Setting Python (Python 3)
-
-In Jessi, pip is already installed.
+Make sure that you have installed venv for Python 3.
+```bash
+sudo apt-get install python3-venv
+```
 
 Make a virtual environment for OpenCV3 with Python3
 ```bash
@@ -204,54 +208,46 @@ To activate the venv you made, execute
 source ~/cv3/bin/activate
 ``` 
 
-
-With Python3, DO NOT install or use virtualenv or virtualenvwrapper.
-Python 3 has built-in virtualenv!
-
-See the [official document](https://docs.python.org/3/library/venv.html) for more information.
-
-(Optional) If you want to upgrade your python 3 to the latest version (3.6.2),follow [this](https://gist.github.com/ys7yoo/93b1531d453eeb803fda30b5480c59c0).
-IT TAKES LONG TIME!!!
-
-
-
-
-
-
-## Step 6: Finishing installation.
-
-Ater completing installation, you will have a .so file in the sitepackage folder IN THE VIRTUAL ENVIONMENT.
-For example, your find cv2.cpython-34m.so in ~/cv3/lib/python3.4/site-packages.
-```
-(cv3) yyoo@RPI3B:~/cv3/lib/python3.4/site-packages $ ls -al
-total 4404
-drwxr-xr-x 10 yyoo yyoo    4096 Aug 25 08:26 .
-drwxr-xr-x  3 yyoo yyoo    4096 Aug 25 04:41 ..
--rw-r--r--  1 root root 4358992 Aug 25 07:44 cv2.cpython-34m.so
--rw-r--r--  1 yyoo yyoo     126 Aug 25 04:41 easy_install.py
-drwxr-xr-x  3 yyoo yyoo    4096 Aug 25 04:41 _markerlib
-drwxr-xr-x 17 yyoo yyoo    4096 Aug 25 04:54 numpy
-drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:54 numpy-1.13.1.egg-info
-drwxr-xr-x  6 yyoo yyoo    4096 Aug 25 04:41 pip
-drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:41 pip-1.5.6.dist-info
--rw-r--r--  1 yyoo yyoo  101340 Aug 25 04:41 pkg_resources.py
-drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:41 __pycache__
-drwxr-xr-x  5 yyoo yyoo    4096 Aug 25 04:41 setuptools
-drwxr-xr-x  2 yyoo yyoo    4096 Aug 25 04:41 setuptools-5.5.1.dist-info
+To deactivate, you can execute
+```bash
+deactivate
 ```
 
-However, the filename should be cv2.so (due to some bugs).
-Go to the folder and change the name.
-```
-sudo mv cv2.cpython-34m.so cv2.so
+
+Let's make a symbolic like inside of your venv package folder. 
+```bash
+ln -s /usr/local/lib/python3.5/dist-packages/cv2.so ~/cv3/lib/python3.5/site-packages/cv2.so
 ```
 
-## Step 7: Testing 
+Result will look like this.
+```bash
+(cv3) yyoo@raspberrypi:~/cv3/lib/python3.5/site-packages $ ls -al
+total 40
+drwxr-xr-x  9 yyoo yyoo 4096 Sep 14 06:44 .
+drwxr-xr-x  3 yyoo yyoo 4096 Sep 14 06:38 ..
+lrwxrwxrwx  1 yyoo yyoo   45 Sep 14 06:44 cv2.so -> /usr/local/lib/python3.5/dist-packages/cv2.so
+-rw-r--r--  1 yyoo yyoo  126 Sep 14 06:39 easy_install.py
+drwxr-xr-x 11 yyoo yyoo 4096 Sep 14 06:39 pip
+drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 pip-9.0.1.dist-info
+drwxr-xr-x  5 yyoo yyoo 4096 Sep 14 06:39 pkg_resources
+drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 pkg_resources-0.0.0.dist-info
+drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 __pycache__
+drwxr-xr-x  5 yyoo yyoo 4096 Sep 14 06:39 setuptools
+drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 setuptools-32.3.1.dist-info
+```
+
+Don't forget to install numpy for a new venv
+```bash
+pip install numpy
+```
+
+
+Now, check that you can use cv2 INSIDE of the virtual environment.
 
 ```
-$ python
-Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
-[GCC 4.9.1] on linux
+(cv3) yyoo@raspberrypi:~/cv3/lib/python3.5/site-packages $ python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170124] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import cv2
 >>> cv2.__version__
