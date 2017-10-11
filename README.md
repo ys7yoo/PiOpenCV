@@ -1,6 +1,7 @@
 # PiOpenCV
 Instruction to install OpenCV on Raspberry Pi.
 * target platform: Raspberry Pi 3B
+* OS: Raspbian Stretch
 * language: Python 3
 * Open CV version: 3.3.0
 
