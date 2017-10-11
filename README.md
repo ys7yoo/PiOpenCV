@@ -38,6 +38,10 @@ sudo dpkg -i opencv3-RPI-STR.deb
 
 3. Add symbolic links
 
+```bash
+sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
+```
+
 
 
 ## Step 3: Testing 
