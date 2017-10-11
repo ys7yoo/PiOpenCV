@@ -21,22 +21,23 @@ sudo apt-get install python3-dev python3-venv -y
 
 ## Step 2. Download and install pre-built packages
 
-**NOTE: NEEDS RE-BUILDING!!! WAIT FOR A MOMENT.** 
+**NOTE: NEEDS RE-BUILDING FOR RASPBIAN STRETCH!!! WAIT FOR A MOMENT.** 
 
-Download the pre-compiled package: 
-https://github.com/ys7yoo/PiOpenCV/releases/download/2017/opencv3-RPI.deb
-
-
+1. Download the pre-compiled package: 
+https://github.com/ys7yoo/PiOpenCV/releases/download/2017.10/opencv3-RPI-STR.deb
 
 ```bash
-wget https://github.com/ys7yoo/PiOpenCV/releases/download/2017/opencv3-RPI.deb
+wget https://github.com/ys7yoo/PiOpenCV/releases/download/2017.10/opencv3-RPI-STR.deb
 ```
 
-Install it.
+2. Install it.
 
 ```bash
-sudo dpkg -i opencv3-RPI.deb
+sudo dpkg -i opencv3-RPI-STR.deb
 ```
+
+3. Add symbolic links
+
 
 
 ## Step 3: Testing 
