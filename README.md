@@ -106,7 +106,7 @@ wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.0.zip
 unzip opencv.zip
 ```
 
-Optionally, install contrib package.
+It's recommended to install contrib package.
 ```bash
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
 unzip opencv_contrib.zip
