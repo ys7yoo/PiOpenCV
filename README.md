@@ -78,7 +78,7 @@ Install Python 3 and numpy
 sudo apt install python3 python3-setuptools python3-dev python3-venv -y
 ```
 ```
-pip install numpy
+pip3 install numpy
 ```
 This takes some time.
 
