@@ -54,8 +54,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 # 2. Harder way: build OpenCV from source
  
- based on the 
+based on the 
 [Install guide: Raspberry Pi 3 + Raspbian Jessie + OpenCV 3](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/) from pyimagesearch.com
+
+testing for Raspberry Pi 3 + Raspbian Stretch + OpenCV3 + Python 3
 
 
 ## Step 1: Remove & install Python
