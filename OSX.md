@@ -9,47 +9,47 @@
 
 # Build OpenCV from source
  
-based on the 
-[Install guide: Raspberry Pi 3 + Raspbian Jessie + OpenCV 3](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/) from pyimagesearch.com
+ 
+Building OpenCV3 for Python3, based on 
+http://www.pyimagesearch.com/2016/12/05/macos-install-opencv-3-and-python-3-5/ from pyimagesearch.com, whith some modifications. 
 
-testing for Raspberry Pi 3 + Raspbian Stretch + OpenCV3 + Python 3
-
-
-## Step 1: Remove & install Python
+## Step 1: Install Xcode (SAME)
 
 
-Still, you may want to remove unused packeges to get more free space.
+## Step 2. Install MacPort
 
-Let's remove python 2.7.
-```bash
-sudo apt purge python
-sudo apt autoremove
-```
+
+
+## Step 3: Install Python 3 using MacPort and numpy 
+
+You can install Python3 using Macport using the following command.
 
 ```bash
-sudo apt-get purge wolfram-engine
+sudo port install python36
 ```
 
-Install Python 3 and numpy
+And, then, activate 36 by:
 ```bash
-sudo apt install python3 python3-setuptools python3-dev python3-venv -y
+sudo port select --set python3 python36
 ```
+
+
+Install numpy
 ```
 pip3 install numpy
 ```
-This takes some time.
+This may take some time.
 
 
-## Step 2: Install dependencies
+## Step 2: Install dependencies using MacPort
 ```bash
-sudo apt-get install build-essential cmake pkg-config -y
-
-sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
-sudo apt-get install libxvidcore-dev libx264-dev -y
-sudo apt-get install libgtk2.0-dev -y
-sudo apt-get install libatlas-base-dev gfortran -y
+sudo port install cmake                
+sudo port install pkgconfig
+sudo port install jpeg libpng openexr -y
+sudo port install eigen3 tbb
+sudo port install ffmpeg
 ```
+
 
 ## Step 3: Download the OpenCV source code
 ```bash
@@ -83,6 +83,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_opencv_python2=OFF \
     -D BUILD_opencv_python3=ON \
     -D PYTHON_DEFAULT_EXECUTABLE=$(which python3) \
+    -D PYTHON3_EXECUTABLE=$(which python3) \
+    -D PYTHON3_LIBRARY=/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/config-3.6m-darwin \
+    -D PYTHON3_LIBRARIES=/opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin \
+    -D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+    -D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \    
     -D INSTALL_C_EXAMPLES=OFF \
     -D INSTALL_PYTHON_EXAMPLES=OFF \
     -D BUILD_EXAMPLES=OFF \
@@ -91,16 +96,6 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.3.0/modules ..
 ```
 
-In the Python section of the log, you should see something like this: 
-```
---   Python 3:
---     Interpreter:                 /usr/bin/python3 (ver 3.5.3)
---     Libraries:                   /usr/lib/arm-linux-gnueabihf/libpython3.5m.so (ver 3.5.3)
---     numpy:                       /home/yyoo/.local/lib/python3.5/site-packages/numpy/core/include (ver 1.13.1)
---     packages path:               lib/python3.5/dist-packages
--- 
---   Python (for build):            /usr/bin/python3
-```
 
 
 Now, let's build & install it.
@@ -108,6 +103,9 @@ Now, let's build & install it.
 make -j4
 sudo make install
 ```
+
+**[FIXED UP TO HERE]**
+
 
 Due to some bugs, the name of the Python binding library is not correct.
 During the installation, you will see log like this.
