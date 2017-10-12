@@ -117,54 +117,34 @@ make -j4
 sudo make install
 ```
 
-**[FIXED UP TO HERE]**
-
 
 Due to some bugs, the name of the Python binding library is not correct.
 During the installation, you will see log like this.
-```bash
--- Installing: /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so
+```
+-- Installing: /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so
 ```
 
 Let's fix it with a symbolic link.
 ```bash
-sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
+sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2.so
 ```
 
 Now, you're ready to use OpenCV from Python system-wide. 
-Testing with Python 3.5: 
+Testing with Python 3.6: 
 ```
 $ python3
-Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
-[GCC 6.3.0 20170124] on linux
+Python 3.6.3 (default, Oct  5 2017, 23:34:28) 
+[GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import cv2
 >>> cv2.__version__
 '3.3.0'
 ```
-
-Testing with Python 3.4: 
-```
-$ python3
-Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
-[GCC 4.9.1] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import cv2
->>> cv2.__version__
-'3.3.0'
-```
-
-
 
 
 ## Step 5: Setting OpenCV for a virtual environment (Python 3)
 
 Next section is for adding access from a virtual environment.
-
-Make sure that you have installed venv for Python 3.
-```bash
-sudo apt-get install python3-venv
-```
 
 Make a virtual environment for OpenCV3 with Python3
 ```bash
@@ -179,24 +159,24 @@ source ~/cv3/bin/activate
 
 Let's make a symbolic like inside of your venv package folder. 
 ```bash
-ln -s /usr/local/lib/python3.5/dist-packages/cv2.so ~/cv3/lib/python3.5/site-packages/cv2.so
+ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2.so ~/cv3/lib/python3.6/site-packages/cv2.so
 ```
 
 Result will look like this.
-```bash
-(cv3) yyoo@raspberrypi:~/cv3/lib/python3.5/site-packages $ ls -al
-total 40
-drwxr-xr-x  9 yyoo yyoo 4096 Sep 14 06:44 .
-drwxr-xr-x  3 yyoo yyoo 4096 Sep 14 06:38 ..
-lrwxrwxrwx  1 yyoo yyoo   45 Sep 14 06:44 cv2.so -> /usr/local/lib/python3.5/dist-packages/cv2.so
--rw-r--r--  1 yyoo yyoo  126 Sep 14 06:39 easy_install.py
-drwxr-xr-x 11 yyoo yyoo 4096 Sep 14 06:39 pip
-drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 pip-9.0.1.dist-info
-drwxr-xr-x  5 yyoo yyoo 4096 Sep 14 06:39 pkg_resources
-drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 pkg_resources-0.0.0.dist-info
-drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 __pycache__
-drwxr-xr-x  5 yyoo yyoo 4096 Sep 14 06:39 setuptools
-drwxr-xr-x  2 yyoo yyoo 4096 Sep 14 06:39 setuptools-32.3.1.dist-info
+```
+(cv3) comp:site-packages yyoo$ ls -al
+total 16
+drwxr-xr-x  10 yyoo  staff   340 Oct 12 17:29 .
+drwxr-xr-x   3 yyoo  staff   102 Oct 12 17:27 ..
+drwxr-xr-x   3 yyoo  staff   102 Oct 12 17:27 __pycache__
+lrwxr-xr-x   1 yyoo  staff    94 Oct 12 17:29 cv2.so -> /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/cv2.so
+-rw-r--r--   1 yyoo  staff   126 Oct 12 17:27 easy_install.py
+drwxr-xr-x  23 yyoo  staff   782 Oct 12 17:27 pip
+drwxr-xr-x  10 yyoo  staff   340 Oct 12 17:27 pip-9.0.1.dist-info
+drwxr-xr-x   6 yyoo  staff   204 Oct 12 17:27 pkg_resources
+drwxr-xr-x  34 yyoo  staff  1156 Oct 12 17:27 setuptools
+drwxr-xr-x  12 yyoo  staff   408 Oct 12 17:27 setuptools-28.8.0.dist-info
+
 ```
 
 Don't forget to install numpy for a new venv
@@ -208,9 +188,9 @@ pip install numpy
 Now, check that you can use cv2 INSIDE of the virtual environment.
 
 ```
-(cv3) yyoo@raspberrypi:~/cv3/lib/python3.5/site-packages $ python3
-Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
-[GCC 6.3.0 20170124] on linux
+(cv3) comp:~ yyoo$ python3
+Python 3.6.3 (default, Oct  5 2017, 23:34:28) 
+[GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import cv2
 >>> cv2.__version__
@@ -224,6 +204,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 Use screen for time-consuming tasks!
 
 ```bash
-sudo apt install screen
+sudo port install screen
 ```
 
