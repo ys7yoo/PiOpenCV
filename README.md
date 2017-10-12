@@ -5,7 +5,7 @@ Instruction to install OpenCV on Raspberry Pi.
 * OS: Raspbian Stretch
 * language: Python 3
 
-Installing OpenCV on OSX is similar. See [OSX.md].
+Installing OpenCV on OSX is similar. See [OSX.md](OSX.md).
 
 
 # 1. Easy way: install pre-compiled packages (**NEED UPDATE**)
