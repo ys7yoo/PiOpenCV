@@ -18,6 +18,8 @@ http://www.pyimagesearch.com/2016/12/05/macos-install-opencv-3-and-python-3-5/ f
 
 ## Step 2. Install MacPort
 
+Install MacPort that is compatible with your OS: https://www.macports.org/install.php
+
 
 
 ## Step 3: Install Python 3 using MacPort and numpy 
