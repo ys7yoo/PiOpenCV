@@ -98,6 +98,17 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.3.0/modules ..
 ```
 
+If things went smoothly, you should see python related log like this:
+```
+--   Python 3:
+--     Interpreter:                 /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3 (ver 3.6.3)
+--     Libraries:                   /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin (ver 3.6.3)
+--     numpy:                       /Users/yyoo/Library/Python/3.6/lib/python/site-packages/numpy/core/include (ver 1.13.1)
+--     packages path:               /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+-- 
+--   Python (for build):            /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
+```
+
 
 
 Now, let's build & install it.
