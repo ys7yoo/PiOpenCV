@@ -2,9 +2,7 @@
 
 * Open CV version: 3.3.0
 * language: Python 3
-* OS: OSX Sierra (10.12), 
-
-
+* OS: OSX Sierra (10.12), and others
 
 
 # Build OpenCV from source
