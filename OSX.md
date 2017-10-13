@@ -43,11 +43,11 @@ This may take some time.
 
 ## Step 2: Install dependencies using MacPort
 ```bash
-sudo port install cmake                
-sudo port install pkgconfig
+sudo port install cmake -y
+sudo port install pkgconfig -y
 sudo port install jpeg libpng openexr -y
-sudo port install eigen3 tbb
-sudo port install ffmpeg
+sudo port install eigen3 tbb -y
+sudo port install ffmpeg -y
 ```
 
 
