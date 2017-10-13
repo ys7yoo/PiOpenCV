@@ -68,7 +68,7 @@ based on the
 testing for Raspberry Pi 3 + Raspbian Stretch + OpenCV3 + Python 3
 
 
-## Step 1: Install Python 3 ( and remove Python 2.7)
+## Step 1: Remove Python 2.7 and install Python 3
 
 
 Still, you may want to remove unused packeges to get more free space.
