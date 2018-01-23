@@ -173,6 +173,7 @@ Let's fix it with a symbolic link.
 sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
 ```
 
+
 Now, you're ready to use OpenCV from Python system-wide. 
 Testing with Python 3.5: 
 ```
@@ -195,6 +196,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> cv2.__version__
 '3.3.0'
 ```
+
+
+ON UBUNTU, it's in `/usr/lib/python3/dist-packages/cv2.so`
+
 
 
 
