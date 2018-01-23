@@ -173,6 +173,8 @@ Let's fix it with a symbolic link.
 sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
 ```
 
+*ON UBUNTU, it's in `/usr/lib/python3/dist-packages/cv2.so`.*
+
 
 Now, you're ready to use OpenCV from Python system-wide. 
 Testing with Python 3.5: 
@@ -198,7 +200,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 
-ON UBUNTU, it's in `/usr/lib/python3/dist-packages/cv2.so`
+
 
 
 
@@ -228,6 +230,15 @@ Let's make a symbolic like inside of your venv package folder.
 ```bash
 ln -s /usr/local/lib/python3.5/dist-packages/cv2.so ~/cv3/lib/python3.5/site-packages/cv2.so
 ```
+
+*ON UBUNTU, you should run the following.*
+```bash
+ln -s /usr/lib/python3/dist-packages/cv2.so ~/cv3/lib/python3.5/site-packages/cv2.so
+```
+Here, '~/cv3' is the virtual environment directory
+
+
+
 
 Result will look like this.
 ```bash
