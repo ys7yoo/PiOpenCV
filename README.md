@@ -109,13 +109,13 @@ sudo apt-get install libatlas-base-dev gfortran -y
 cd ~
 mkdir src
 cd src
-wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.0.zip
+wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.0.zip
 unzip opencv.zip
 ```
 
 It's recommended to include contrib package.
 ```bash
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
 unzip opencv_contrib.zip
 ```
 
@@ -127,7 +127,7 @@ unzip opencv_contrib.zip
 
 Prepare configurations to build OpenCV from the source you downloaded.
 ```
-cd opencv-3.3.0
+cd opencv-3.4.0
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -185,7 +185,7 @@ Python 3.5.3 (default, Jan 19 2017, 14:11:04)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import cv2
 >>> cv2.__version__
-'3.3.0'
+'3.4.0'
 ```
 
 Testing with Python 3.4: 
@@ -196,7 +196,7 @@ Python 3.4.2 (default, Oct 19 2014, 13:31:11)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import cv2
 >>> cv2.__version__
-'3.3.0'
+'3.4.0'
 ```
 
 
@@ -272,7 +272,7 @@ Python 3.5.3 (default, Jan 19 2017, 14:11:04)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import cv2
 >>> cv2.__version__
-'3.3.0'
+'3.4.0'
 ```
 
 
