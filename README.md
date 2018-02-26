@@ -141,7 +141,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=OFF \
     -D BUILD_TESTS=OFF \
     -D BUILD_PERF_TESTS=OFF \
-    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.0/modules ..
+    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.0/modules 
+    -D D WITH_CUDA=OFF \
+    ..
 ```
 
 In the Python section of the log, you should see something like this: 
