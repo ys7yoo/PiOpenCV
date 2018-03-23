@@ -109,13 +109,13 @@ sudo apt-get install libatlas-base-dev gfortran -y
 cd ~
 mkdir src
 cd src
-wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.0.zip
+wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.1.zip
 unzip opencv.zip
 ```
 
 It's recommended to include contrib package.
 ```bash
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.1.zip
 unzip opencv_contrib.zip
 ```
 
@@ -127,7 +127,7 @@ unzip opencv_contrib.zip
 
 Prepare configurations to build OpenCV from the source you downloaded.
 ```
-cd opencv-3.4.0
+cd opencv-3.4.1
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -141,7 +141,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=OFF \
     -D BUILD_TESTS=OFF \
     -D BUILD_PERF_TESTS=OFF \
-    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.0/modules \
+    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.1/modules \
     -D WITH_CUDA=OFF \
     ..
 ```
