@@ -169,6 +169,12 @@ During the installation, you will see log like this.
 ```bash
 -- Installing: /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so
 ```
+On Ubuntu, something like this:
+```
+Installing: /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so
+-- Set runtime path of "/usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so" to "/usr/local/lib"
+```
+
 
 Let's fix it with a symbolic link.
 ```bash
