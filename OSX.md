@@ -1,6 +1,6 @@
 # Instruction for installing OpenCV on OSX
 
-* Open CV version: 3.3.0
+* Open CV version: 3.4.1
 * language: Python 3
 * OS: OSX Sierra (10.12), and others
 
@@ -56,13 +56,13 @@ sudo port install ffmpeg -y
 cd ~
 mkdir src
 cd src
-wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.0.zip
+wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.1.zip
 unzip opencv.zip
 ```
 
 It's recommended to include contrib package.
 ```bash
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.1.zip
 unzip opencv_contrib.zip
 ```
 
@@ -93,7 +93,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=OFF \
     -D BUILD_TESTS=OFF \
     -D BUILD_PERF_TESTS=OFF \
-    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.3.0/modules ..
+    -D WITH_CUDA=OFF \    
+    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.1/modules ..
 ```
 
 If things went smoothly, you should see python related log like this:
