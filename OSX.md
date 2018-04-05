@@ -102,12 +102,12 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 If things went smoothly, you should see python related log like this:
 ```
 --   Python 3:
---     Interpreter:                 /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3 (ver 3.6.3)
---     Libraries:                   /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin (ver 3.6.3)
---     numpy:                       /Users/yyoo/Library/Python/3.6/lib/python/site-packages/numpy/core/include (ver 1.13.1)
+--     Interpreter:                 /opt/local/bin/python3 (ver 3.6.5)
+--     Libraries:                   /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin (ver 3.6.5)
+--     numpy:                       /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/numpy/core/include (ver 1.14.2)
 --     packages path:               /opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
 -- 
---   Python (for build):            /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
+--   Python (for build):            /opt/local/bin/python3
 ```
 
 
