@@ -95,7 +95,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_TESTS=OFF \
     -D BUILD_PERF_TESTS=OFF \
     -D WITH_CUDA=OFF \
-    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.1/modules ..
+    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.1/modules \
+    -D LINK_DIRECTORIES=/opt/local/lib/  ..
 ```
 
 If things went smoothly, you should see python related log like this:
