@@ -48,6 +48,7 @@ sudo port install pkgconfig -y
 sudo port install jpeg libpng openexr -y
 sudo port install eigen3 tbb -y
 sudo port install ffmpeg -y
+sudo port install freetype -y
 sudo port install wget -y
 ```
 
