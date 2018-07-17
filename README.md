@@ -1,66 +1,16 @@
 # PiOpenCV
 Instruction to install OpenCV on Raspberry Pi.
-* Open CV version: 3.4.0 (*UPGRADING FROM 3.3.0 TO 3.4.0)
-* target platform: Raspberry Pi 3B (Ubuntu)
-* OS: Raspbian Stretch
+* Open CV version: 3.4.1 
+* target platform: Raspberry Pi 3B 
+* OS: Raspbian Stretch (or Ubuntu)
 * language: Python 3
 
 Installing OpenCV on OSX is similar. See [OSX.md](OSX.md).
 
 
-# 1. Easy way: install pre-compiled packages (**NEED UPDATE**)
-
-## Step 1: Install dependencies
-```bash
-sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
-sudo apt-get install libxvidcore-dev libx264-dev -y
-sudo apt-get install libgtk2.0-dev -y
-sudo apt-get install libatlas-base-dev gfortran -y
-
-sudo apt-get install python3-dev python3-venv -y
-```
-
-## Step 2. Download and install pre-built packages
-
-**NOTE: NEEDS RE-BUILDING FOR RASPBIAN STRETCH!!! WAIT FOR A MOMENT.** 
-
-1. Download the pre-compiled package: 
-https://github.com/ys7yoo/PiOpenCV/releases/download/2017.10/opencv3-RPI-STR.deb
-
-```bash
-wget https://github.com/ys7yoo/PiOpenCV/releases/download/2017.10/opencv3-RPI-STR.deb
-```
-
-2. Install it.
-
-```bash
-sudo dpkg -i opencv3-RPI-STR.deb
-```
-
-3. Add symbolic links
-
-```bash
-sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
-```
 
 
-
-## Step 3: Testing 
-
-```
-$ python
-Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
-[GCC 4.9.1] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import cv2
->>> cv2.__version__
-'3.3.0'
-```
-
-
-
-# 2. Harder way: build OpenCV from source
+# Harder way: build OpenCV from source
  
 based on the 
 [Install guide: Raspberry Pi 3 + Raspbian Jessie + OpenCV 3](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/) from pyimagesearch.com
@@ -293,4 +243,57 @@ Use screen for time-consuming tasks!
 ```bash
 sudo apt install screen
 ```
+
+
+
+# 1. Easy way: install pre-compiled packages (**NEED UPDATE**)
+
+## Step 1: Install dependencies
+```bash
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
+sudo apt-get install libxvidcore-dev libx264-dev -y
+sudo apt-get install libgtk2.0-dev -y
+sudo apt-get install libatlas-base-dev gfortran -y
+
+sudo apt-get install python3-dev python3-venv -y
+```
+
+## Step 2. Download and install pre-built packages
+
+**NOTE: NEEDS RE-BUILDING FOR RASPBIAN STRETCH!!! WAIT FOR A MOMENT.** 
+
+1. Download the pre-compiled package: 
+https://github.com/ys7yoo/PiOpenCV/releases/download/2017.10/opencv3-RPI-STR.deb
+
+```bash
+wget https://github.com/ys7yoo/PiOpenCV/releases/download/2017.10/opencv3-RPI-STR.deb
+```
+
+2. Install it.
+
+```bash
+sudo dpkg -i opencv3-RPI-STR.deb
+```
+
+3. Add symbolic links
+
+```bash
+sudo ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
+```
+
+
+
+## Step 3: Testing 
+
+```
+$ python
+Python 3.4.2 (default, Oct 19 2014, 13:31:11) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.4.1'
+```
+
 
