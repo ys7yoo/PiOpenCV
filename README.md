@@ -59,13 +59,13 @@ sudo apt-get install libatlas-base-dev gfortran -y
 cd ~
 mkdir src
 cd src
-wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.1.zip
+wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.7.zip
 unzip opencv.zip
 ```
 
 It's recommended to include contrib package.
 ```bash
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.1.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.7.zip
 unzip opencv_contrib.zip
 ```
 
