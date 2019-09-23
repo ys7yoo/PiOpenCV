@@ -77,7 +77,7 @@ unzip opencv_contrib.zip
 
 Prepare configurations to build OpenCV from the source you downloaded.
 ```
-cd opencv-3.4.1
+cd opencv-3.4.7
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
