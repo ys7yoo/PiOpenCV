@@ -91,7 +91,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=OFF \
     -D BUILD_TESTS=OFF \
     -D BUILD_PERF_TESTS=OFF \
-    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.1/modules \
+    -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.7/modules \
     -D WITH_CUDA=OFF \
     ..
 ```
